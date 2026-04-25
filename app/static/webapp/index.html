@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Меню</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="/webapp/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <h1 id="restaurantName">Загрузка...</h1>
+      <p id="restaurantAddress"></p>
+    </div>
+  </header>
+
+  <section id="categories" class="chips"></section>
+  <main id="products" class="grid"></main>
+
+  <button id="cartBtn" class="cart-btn">🛒 Корзина: <span id="cartTotal">0</span> сум</button>
+
+  <div id="cartModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeCart" class="close">×</button>
+      <h2>Корзина</h2>
+      <div id="cartItems"></div>
+      <h3>Итого: <span id="modalTotal">0</span> сум</h3>
+      <input id="name" placeholder="Ваше имя" />
+      <input id="phone" placeholder="Телефон" />
+      <select id="deliveryType">
+        <option value="delivery">Доставка</option>
+        <option value="pickup">Самовывоз</option>
+      </select>
+      <input id="address" placeholder="Адрес доставки" />
+      <select id="paymentMethod">
+        <option value="cash">Наличные</option>
+        <option value="card">Карта при получении</option>
+      </select>
+      <textarea id="comment" placeholder="Комментарий к заказу"></textarea>
+      <button id="sendOrder" class="primary">Оформить заказ</button>
+    </div>
+  </div>
+
+  <script src="/webapp/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админка</title>
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+  <link rel="stylesheet" href="/admin/admin.css" />
+</head>
+<body>
+  <header><h1>Админка кафе</h1></header>
+  <nav>
+    <button onclick="showTab('orders')">Заказы</button>
+    <button onclick="showTab('products')">Меню</button>
+    <button onclick="showTab('clients')">Клиенты</button>
+  </nav>
+  <section id="orders" class="tab"></section>
+  <section id="products" class="tab hidden">
+    <h2>Добавить товар</h2>
+    <input id="pName" placeholder="Название">
+    <input id="pDesc" placeholder="Описание">
+    <input id="pPrice" placeholder="Цена" type="number">
+    <select id="pCategory"></select>
+    <button onclick="createProduct()">Добавить</button>
+    <h2>Товары</h2>
+    <div id="productsList"></div>
+  </section>
+  <section id="clients" class="tab hidden"></section>
+  <script src="/admin/admin.js"></script>
+</body>
+</html>
