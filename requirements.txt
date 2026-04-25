@@ -6,4 +6,3 @@ sqlalchemy
 aiosqlite
 aiofiles
 python-multipart
-uvicorn[standard]
