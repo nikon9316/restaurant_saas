@@ -10,10 +10,12 @@ from app.database import init_db
 from app.bot.handlers import router as bot_router
 from app.api.client_routes import router as client_router
 from app.api.admin_routes import router as admin_router
+import os
 
 app = FastAPI(title="Restaurant SaaS MVP")
 app.include_router(client_router)
 app.include_router(admin_router)
+os.makedirs("app/static/uploads", exist_ok=True)
 app.mount("/webapp", StaticFiles(directory="app/static/webapp", html=True), name="webapp")
 app.mount("/admin", StaticFiles(directory="app/static/admin", html=True), name="admin")
 app.mount("/uploads", StaticFiles(directory="app/static/uploads"), name="uploads")
