@@ -5,7 +5,7 @@ load_dotenv()
 
 BOT_TOKEN = os.getenv("BOT_TOKEN", "")
 ADMIN_ID = int(os.getenv("ADMIN_ID", "0"))
-BASE_PUBLIC_URL = os.getenv("BASE_PUBLIC_URL", "http://127.0.0.1:8000").rstrip("/")
+BASE_PUBLIC_URL = os.getenv("BASE_PUBLIC_URL", "restaurantsaas-production.up.railway.app").rstrip("/")
 DATABASE_URL = os.getenv("DATABASE_URL", "sqlite+aiosqlite:///./restaurant_saas.db")
 WEB_HOST = os.getenv("WEB_HOST", "0.0.0.0")
 WEB_PORT = int(os.getenv("WEB_PORT", "8000"))
